@@ -1,0 +1,94 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "README.md",
+    "elixir/README.md",
+    "docs/symphony-oh-my-opencode-getting-started.md"
+  ],
+  "mcp": {
+    "everything_claude_code": {
+      "type": "local",
+      "command": ["npx", "-y", "ecc-universal"],
+      "enabled": false
+    },
+    "figma_context_mcp": {
+      "type": "local",
+      "command": ["npx", "-y", "figma-developer-mcp", "--stdio"],
+      "environment": {
+        "FIGMA_API_KEY": "{env:FIGMA_API_KEY}"
+      },
+      "enabled": true
+    },
+    "openfang": {
+      "type": "local",
+      "command": ["openfang", "start"],
+      "enabled": false
+    },
+    "unity_mcp_coplay": {
+      "type": "remote",
+      "url": "http://localhost:8080/mcp",
+      "enabled": false
+    },
+    "magic_mcp": {
+      "type": "local",
+      "command": ["npx", "-y", "@21st-dev/magic@latest"],
+      "environment": {
+        "API_KEY": "{env:MAGIC_21ST_API_KEY}"
+      },
+      "enabled": false
+    },
+    "npcpy": {
+      "type": "local",
+      "command": ["npcsh"],
+      "enabled": false
+    },
+    "unity_mcp_ivanmurzak": {
+      "type": "remote",
+      "url": "http://localhost:8080",
+      "enabled": false
+    },
+    "unreal_genai_support": {
+      "type": "local",
+      "command": ["python", "integrations/mcp-servers/UnrealGenAISupport/Content/Python/mcp_server.py"],
+      "environment": {
+        "UNREAL_HOST": "localhost",
+        "UNREAL_PORT": "9877"
+      },
+      "enabled": false
+    },
+    "roblox_studio_rust_mcp_server": {
+      "type": "local",
+      "command": ["integrations/mcp-servers/studio-rust-mcp-server/target/release/rbx-studio-mcp"],
+      "enabled": false
+    },
+    "blender_mcp_vxai": {
+      "type": "local",
+      "command": ["uvx", "blender-mcp-vxai==1.0.7"],
+      "enabled": false
+    },
+    "game_asset_mcp": {
+      "type": "local",
+      "command": ["node", "integrations/mcp-servers/game-asset-mcp/src/index.js"],
+      "enabled": false
+    },
+    "advanced_unity_mcp": {
+      "type": "remote",
+      "url": "http://localhost:6400/mcp",
+      "enabled": false
+    },
+    "flstudio_mcp": {
+      "type": "local",
+      "command": ["python", "integrations/mcp-servers/flstudio-mcp/trigger.py"],
+      "enabled": false
+    },
+    "obs_mcp": {
+      "type": "local",
+      "command": ["npx", "-y", "obs-mcp@latest"],
+      "environment": {
+        "OBS_WEBSOCKET_URL": "{env:OBS_WEBSOCKET_URL}",
+        "OBS_WEBSOCKET_PASSWORD": "{env:OBS_WEBSOCKET_PASSWORD}"
+      },
+      "enabled": true
+    }
+  }
+}

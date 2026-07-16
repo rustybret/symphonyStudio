@@ -30,9 +30,13 @@ Tell your favorite coding agent to build Symphony in a programming language of y
 Check out [elixir/README.md](elixir/README.md) for instructions on how to set up your environment
 and run the Elixir-based Symphony implementation. You can also ask your favorite coding agent to
 help with the setup:
-
+ 
 > Set up Symphony for my repository based on
 > https://github.com/openai/symphony/blob/main/elixir/README.md
+
+If you want to run Symphony with OpenCode + oh-my-opencode and a pre-registered MCP stack, use:
+
+> [docs/symphony-oh-my-opencode-getting-started.md](docs/symphony-oh-my-opencode-getting-started.md)
 
 ---
 
